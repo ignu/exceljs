@@ -15995,7 +15995,7 @@ class TableXform extends BaseXform {
         if (this.map.autoFilter.model) {
           this.model.autoFilterRef = this.map.autoFilter.model.autoFilterRef;
           this.map.autoFilter.model.columns.forEach((column, index) => {
-            if (column) {
+            if (column && this.model.columns[index]) {
               this.model.columns[index].filterButton = column.filterButton;
             }
           });
